@@ -10,7 +10,13 @@ class App extends Component {
           <div className='page-title-container'>
             <h1 className='page-title'>Catalonia Locations</h1>
           </div>
+          <div className='search-container'>
+            <input className='search-input' placeholder='Station location' />
+            <button>Filter</button>
+          </div>
           <ul>
+            <li>Some place</li>
+            <li>Some place</li>
             <li>Some place</li>
           </ul>
         </div>

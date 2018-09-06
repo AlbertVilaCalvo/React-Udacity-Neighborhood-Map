@@ -25,6 +25,17 @@
   padding-bottom: 20px;
 }
 
+.search-container {
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+}
+
+.search-input {
+  flex-grow: 1;
+  margin-right: 8px;
+}
+
 /* RIGHT CONTAINER */
 
 .right-container {
