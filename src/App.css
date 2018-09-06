@@ -5,11 +5,27 @@
   flex-direction: row;
 }
 
+/* LEFT CONTAINER */
+
 .left-container {
-  background-color: aqua;
+  /* background-color: aqua; */
   height: 100%;
   width: 400px;
 }
+
+.page-title-container {
+  background-color: black;
+}
+
+.page-title {
+  color: #ccc;
+  font-size: 20px;
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* RIGHT CONTAINER */
 
 .right-container {
   background-color: red;
@@ -17,6 +33,15 @@
   flex-grow: 1;
 }
 
-.page-title {
-  color: #ccc;
+.right-container-top-bar {
+  background-color: #1f1f1f;
 }
+
+.menu-icon {
+  width: 43px;
+  height: 43px;
+  margin-left: 30px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+

@@ -7,13 +7,17 @@ class App extends Component {
     return (
       <div className="App">
         <div className='left-container'>
-          <h1 className='page-title'>Catalonia Locations</h1>
+          <div className='page-title-container'>
+            <h1 className='page-title'>Catalonia Locations</h1>
+          </div>
           <ul>
             <li>Some place</li>
           </ul>
         </div>
         <div className='right-container'>
-          <img src={menu} alt='Menu'/>
+          <div className='right-container-top-bar'>
+            <img src={menu} alt='Menu' className='menu-icon'/>
+          </div>
         </div>
       </div>
     );
