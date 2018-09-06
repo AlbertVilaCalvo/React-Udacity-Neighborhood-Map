@@ -34,6 +34,12 @@
 .search-input {
   flex-grow: 1;
   margin-right: 8px;
+  height: 34px;
+  font-size: 18px;
+}
+
+.search-button {
+  width: 80px;
 }
 
 /* RIGHT CONTAINER */

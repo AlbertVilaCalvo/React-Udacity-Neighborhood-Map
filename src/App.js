@@ -12,7 +12,7 @@ class App extends Component {
           </div>
           <div className='search-container'>
             <input className='search-input' placeholder='Station location' />
-            <button>Filter</button>
+            <button className='search-button'>Filter</button>
           </div>
           <ul>
             <li>Some place</li>
