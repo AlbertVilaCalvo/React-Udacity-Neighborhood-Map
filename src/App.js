@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import menu from './menu.svg';
 import './App.css';
+import Map from './Map';
 
 class App extends Component {
   render() {
@@ -20,9 +21,19 @@ class App extends Component {
             <li>Some place</li>
           </ul>
         </div>
+
         <div className='right-container'>
           <div className='right-container-top-bar'>
             <img src={menu} alt='Menu' className='menu-icon'/>
+          </div>
+          <div className='map-container'>
+            <Map
+              isMarkerShown
+              googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+              loadingElement={<div style={{ height: `100%` }} />}
+              containerElement={<div style={{ height: `100vh` }} />}
+              mapElement={<div style={{ height: `100%` }} />}
+            />
           </div>
         </div>
       </div>
