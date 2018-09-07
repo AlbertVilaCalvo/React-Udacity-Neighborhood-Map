@@ -103,7 +103,7 @@ class App extends Component {
               isMarkerShown
               googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyCxHDcOqSP9RuEhsRGu81XqiTomYzVETfo"
               loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={<div style={{ height: `calc(100vh - 63px)` }} />}
+              containerElement={<div style={{ height: `calc(100vh - 63px)` }}  role="application" aria-label="Map with catalan locations" />}
               mapElement={<div style={{ height: `100%` }} />}
               locations={filteredLocations}
               onMarkerClick={this.onMarkerClick}
