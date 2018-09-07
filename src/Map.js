@@ -10,9 +10,7 @@ const MapComponent = withScriptjs(withGoogleMap((props) =>
       <Marker
         key={location.name}
         position={{ lat: location.lat, lng: location.lng }}
-        onClick={(event) => {
-          props.onMarkerClick(location);
-        }}
+        onClick={() => props.onMarkerClick(location)}
         animation={location.selected ? 1 : 2}
       >
         {location.selected && (
