@@ -17,9 +17,11 @@ const MapComponent = withScriptjs(withGoogleMap((props) =>
         }}
         animation={location.selected ? 1 : 2}
       >
-        {/* <InfoWindow>
-          <div>Hola</div>
-        </InfoWindow>} */}
+        {location.selected && (
+          <InfoWindow>
+            <div>{location.info ? location.info : 'Getting information. Please wait.'}</div>
+          </InfoWindow>
+        )}
       </Marker>
     )}
   </GoogleMap>

@@ -10,7 +10,8 @@ import SearchFilter from './SearchFilter';
 class App extends Component {
   state = {
     searchText: '',
-    selectedLocationName: ''
+    selectedLocationName: '',
+    locationsInfo: {}
   }
 
   onSearchTextChange = (searchText) => {
@@ -20,13 +21,24 @@ class App extends Component {
   onMarkerClick = (location) => {
     console.log('selected location', location);
     this.setState({ selectedLocationName : location.name });
+    fetch(location.wikipediaUrl)
+    .then(response => response.json())
+    .then(info => {
+      console.log(info)
+      this.setState(({ locationsInfo }) => {
+        locationsInfo[location.name] = info.extract;
+        return { locationsInfo };
+      })
+    });
   }
 
   render() {
     const { locations } = this.props;
-    const { searchText, selectedLocationName } = this.state;
+    const { searchText, selectedLocationName, locationsInfo } = this.state;
 
     let filteredLocations;
+
+    // filter
     if (searchText) {
       const match = new RegExp(escapeRegExp(searchText), 'i');
       filteredLocations = locations.filter(loc => match.test(loc.name));
@@ -34,14 +46,23 @@ class App extends Component {
       filteredLocations = locations;
     }
 
+    // sort
     filteredLocations.sort(sortBy('name'));
 
+    // set 'selected'
     filteredLocations = filteredLocations.map(location => {
       if (location.name === selectedLocationName) {
         location.selected = true;
       } else {
         location.selected = false;
       }
+      return location;
+    });
+
+    // set 'info'
+    filteredLocations = filteredLocations.map(location => {
+      const info = locationsInfo[location.name];
+      location.info = 'From Wikipedia.org: ' + info;
       return location;
     });
 
