@@ -4,14 +4,6 @@ import './App.css';
 import Map from './Map';
 
 class App extends Component {
-  state = {
-    locations: [
-      { name: 'Sagrada Família' },
-      { name: 'Montserrat' },
-      { name: 'Plaça Catalunya' },
-    ]
-  }
-
   render() {
     return (
       <div className="App">
@@ -24,7 +16,7 @@ class App extends Component {
             <button className='search-button'>Filter</button>
           </div>
           <ul>
-            {this.state.locations.map(location =>
+            {this.props.locations.map(location =>
               <li key={location.name}>{location.name}</li>
             )}
           </ul>
