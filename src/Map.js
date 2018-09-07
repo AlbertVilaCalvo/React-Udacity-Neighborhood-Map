@@ -11,8 +11,6 @@ const MapComponent = withScriptjs(withGoogleMap((props) =>
         key={location.name}
         position={{ lat: location.lat, lng: location.lng }}
         onClick={(event) => {
-          console.log('click');
-          console.log(event);
           props.onMarkerClick(location);
         }}
         animation={location.selected ? 1 : 2}

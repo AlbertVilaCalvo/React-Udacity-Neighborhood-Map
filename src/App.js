@@ -21,13 +21,13 @@ class App extends Component {
   }
 
   onLocationListItemClick = (location) => {
-    console.log('selected list item location', location);
+    // console.log('selected list item location', location);
     this.setState({ selectedLocationName : location.name });
     this.getWikipediaInfoForLocation(location);
   }
 
   onMarkerClick = (location) => {
-    console.log('selected marker location', location);
+    // console.log('selected marker location', location);
     this.setState({ selectedLocationName : location.name });
     this.getWikipediaInfoForLocation(location);
   }
