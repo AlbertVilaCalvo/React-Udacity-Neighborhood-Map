@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import escapeRegExp from 'escape-string-regexp';
+import sortBy from 'sort-by';
 import menu from './menu.svg';
 import './App.css';
 import LocationList from './LocationList';
@@ -11,11 +13,23 @@ class App extends Component {
   }
 
   onSearchTextChange = (searchText) => {
-    console.log('searchText: ' + searchText);
     this.setState({ searchText })
   }
 
   render() {
+    const { locations } = this.props;
+    const { searchText } = this.state;
+
+    let filteredLocations;
+    if (searchText) {
+      const match = new RegExp(escapeRegExp(searchText), 'i');
+      filteredLocations = locations.filter(loc => match.test(loc.name));
+    } else {
+      filteredLocations = locations;
+    }
+
+    filteredLocations.sort(sortBy('name'));
+
     return (
       <div className="App">
         <div className='left-container'>
@@ -23,10 +37,10 @@ class App extends Component {
             <h1 className='page-title'>Catalonia Locations</h1>
           </div>
           <SearchFilter
-            searchText={this.state.searchText}
+            searchText={searchText}
             onSearchTextChange={this.onSearchTextChange}
           />
-          <LocationList locations={this.props.locations} />
+          <LocationList locations={filteredLocations} />
         </div>
 
         <div className='right-container'>
