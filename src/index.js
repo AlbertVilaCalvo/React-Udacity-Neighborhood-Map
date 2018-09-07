@@ -8,6 +8,9 @@ const locations = [
   { name: 'Sagrada Família' },
   { name: 'Montserrat' },
   { name: 'Plaça Catalunya' },
+  { name: 'Dalí Museum' },
+  { name: 'Cadequés' },
+  { name: 'Banyoles' },
 ];
 
 ReactDOM.render(<App locations={locations} />, document.getElementById('root'));
