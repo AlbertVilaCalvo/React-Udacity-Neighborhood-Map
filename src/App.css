@@ -49,6 +49,10 @@
   cursor: pointer;
 }
 
+.location-list-item:hover {
+  background-color: #e0e0e0;
+}
+
 .location-list-item-selected {
   background-color: #e0e0e0;
 }
