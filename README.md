@@ -8,4 +8,8 @@ This runs the app in development mode.
 
 You can then open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+## Wikipedia API
+
+This app uses the Wikipedia API to retrieve information about the displayed locations.
+
 Enjoy!
