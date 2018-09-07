@@ -7,6 +7,8 @@ import LocationList from './LocationList';
 import Map from './Map';
 import SearchFilter from './SearchFilter';
 
+const INFO_ERROR_MESSAGE = 'An error ocurred. Please try again.';
+
 class App extends Component {
   state = {
     searchText: '',
@@ -32,11 +34,17 @@ class App extends Component {
 
   getWikipediaInfoForLocation = (location) => {
     fetch(location.wikipediaUrl)
-    .then(response => response.json())
+    .then(response => response.ok ? response.json() : response.json().then(err => Promise.reject(err)))
     .then(info => {
       // console.log(info)
       this.setState(({ locationsInfo }) => {
         locationsInfo[location.name] = info.extract;
+        return { locationsInfo };
+      })
+    })
+    .catch(error => {
+      this.setState(({ locationsInfo }) => {
+        locationsInfo[location.name] = INFO_ERROR_MESSAGE;
         return { locationsInfo };
       })
     });
@@ -72,7 +80,9 @@ class App extends Component {
     // set 'info'
     filteredLocations = filteredLocations.map(location => {
       const info = locationsInfo[location.name];
-      if (info) {
+      if (info === INFO_ERROR_MESSAGE) {
+        location.info = INFO_ERROR_MESSAGE;
+      } else if (info) {
         location.info = 'From Wikipedia.org: ' + info;
       }
       return location;
