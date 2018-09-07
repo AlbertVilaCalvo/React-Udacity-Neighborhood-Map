@@ -3,6 +3,7 @@ import menu from './menu.svg';
 import './App.css';
 import LocationList from './LocationList';
 import Map from './Map';
+import SearchFilter from './SearchFilter';
 
 class App extends Component {
   render() {
@@ -12,10 +13,7 @@ class App extends Component {
           <div className='page-title-container'>
             <h1 className='page-title'>Catalonia Locations</h1>
           </div>
-          <div className='search-container'>
-            <input className='search-input' placeholder='Station location' />
-            <button className='search-button'>Filter</button>
-          </div>
+          <SearchFilter />
           <LocationList locations={this.props.locations} />
         </div>
 
