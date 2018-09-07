@@ -5,12 +5,18 @@
   flex-direction: row;
 }
 
+
+
 /* LEFT CONTAINER */
 
 .left-container {
   /* background-color: aqua; */
   height: 100%;
-  width: 400px;
+  width: 280px;
+}
+
+.left-container.hidden {
+  width: 0;
 }
 
 .page-title-container {
@@ -57,6 +63,8 @@
   background-color: #e0e0e0;
 }
 
+
+
 /* RIGHT CONTAINER */
 
 .right-container {
@@ -77,3 +85,15 @@
   margin-bottom: 8px;
 }
 
+.menu-icon:hover {
+  cursor: pointer;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1000px) {
+  .left-container {
+    width: 220px;
+  }
+}

@@ -96,7 +96,9 @@ class App extends Component {
 
         <div className='right-container'>
           <div className='right-container-top-bar'>
-            <img src={menu} alt='Menu' className='menu-icon'/>
+            <img src={menu} alt='Menu' className='menu-icon' onClick={() => {
+              document.getElementsByClassName('left-container')[0].classList.toggle('hidden');
+            }}/>
           </div>
           <div className='map-container'>
             <Map
