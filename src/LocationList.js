@@ -8,7 +8,7 @@ class LocationList extends Component {
           <li
             key={location.name}
             className='location-list-item'
-            onClick={() => this.props.onLocatioListItemClick(location)}
+            onClick={() => this.props.onLocationListItemClick(location)}
             >
             {location.name}
           </li>

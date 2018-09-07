@@ -18,7 +18,7 @@ class App extends Component {
     this.setState({ searchText })
   }
 
-  onLocatioListItemClick = (location) => {
+  onLocationListItemClick = (location) => {
     console.log('selected list item location', location);
     this.setState({ selectedLocationName : location.name });
     this.getWikipediaInfoForLocation(location);
@@ -90,7 +90,7 @@ class App extends Component {
           />
           <LocationList
             locations={filteredLocations}
-            onLocatioListItemClick={this.onLocatioListItemClick}
+            onLocationListItemClick={this.onLocationListItemClick}
           />
         </div>
 
