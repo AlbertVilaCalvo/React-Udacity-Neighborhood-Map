@@ -94,7 +94,7 @@ class App extends Component {
 
     return (
       <main className="App">
-        <div className='left-container'>
+        <section className='left-container'>
           <div className='page-title-container'>
             <h1 className='page-title'>Catalonia Locations</h1>
           </div>
@@ -106,9 +106,9 @@ class App extends Component {
             locations={filteredLocations}
             onLocationListItemClick={this.onLocationListItemClick}
           />
-        </div>
+        </section>
 
-        <div className='right-container'>
+        <section className='right-container'>
           <div className='right-container-top-bar'>
             <img src={menu} alt='Menu' className='menu-icon' role="navigation" onClick={() => {
               document.getElementsByClassName('left-container')[0].classList.toggle('hidden');
@@ -126,7 +126,7 @@ class App extends Component {
               onInfoWindowClosed={this.onInfoWindowClosed}
             />
           </div>
-        </div>
+        </section>
       </main>
     );
   }
