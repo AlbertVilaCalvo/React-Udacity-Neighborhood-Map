@@ -2,6 +2,8 @@
 
 ## How to try the production app
 
+`npm install` or `yarn install`
+
 `npm start` or `yarn start`
 
 `npm run build` or `yarn build`
@@ -15,6 +17,8 @@ This runs the app in production mode. The production app works offline with a Se
 You can then open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
 ## How to try the development app
+
+`npm install` or `yarn install`
 
 `npm start` or `yarn start`
 
