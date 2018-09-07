@@ -6,7 +6,7 @@ class SearchFilter extends Component {
       <div className='search-container'>
         <input
           type='text'
-          placeholder='Station location'
+          placeholder='Search Location'
           value={this.props.searchText}
           onChange={event => this.props.onSearchTextChange(event.target.value)}
           className='search-input'

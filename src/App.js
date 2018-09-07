@@ -54,6 +54,7 @@ class App extends Component {
               loadingElement={<div style={{ height: `100%` }} />}
               containerElement={<div style={{ height: `calc(100vh - 63px)` }} />}
               mapElement={<div style={{ height: `100%` }} />}
+              locations={filteredLocations}
             />
           </div>
         </div>
