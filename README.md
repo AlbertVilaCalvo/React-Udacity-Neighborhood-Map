@@ -10,7 +10,7 @@
 
 `serve -s build`
 
-This runs the app in development mode.
+This runs the app in production mode. The production app works offline with a ServiceWorker.
 
 You can then open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
