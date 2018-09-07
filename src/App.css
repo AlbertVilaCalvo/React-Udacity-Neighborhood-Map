@@ -68,7 +68,6 @@
 /* RIGHT CONTAINER */
 
 .right-container {
-  background-color: red;
   height: 100%;
   flex-grow: 1;
 }
@@ -88,6 +87,7 @@
 .menu-icon:hover {
   cursor: pointer;
 }
+
 
 
 /* MEDIA QUERIES */
