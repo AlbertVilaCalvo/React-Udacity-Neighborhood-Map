@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class LocationList extends Component {
   render() {
     return (
-      <ul>
+      <ul className='location-list'>
         {this.props.locations.map(location =>
-          <li key={location.name}>{location.name}</li>
+          <li key={location.name} className='location-list-item'>{location.name}</li>
         )}
       </ul>
     )

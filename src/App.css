@@ -42,6 +42,15 @@
   width: 80px;
 }
 
+.location-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.location-list-item {
+  margin: 25px;
+}
+
 /* RIGHT CONTAINER */
 
 .right-container {
