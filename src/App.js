@@ -6,6 +6,15 @@ import Map from './Map';
 import SearchFilter from './SearchFilter';
 
 class App extends Component {
+  state = {
+    searchText: ''
+  }
+
+  onSearchTextChange = (searchText) => {
+    console.log('searchText: ' + searchText);
+    this.setState({ searchText })
+  }
+
   render() {
     return (
       <div className="App">
@@ -13,7 +22,10 @@ class App extends Component {
           <div className='page-title-container'>
             <h1 className='page-title'>Catalonia Locations</h1>
           </div>
-          <SearchFilter />
+          <SearchFilter
+            searchText={this.state.searchText}
+            onSearchTextChange={this.onSearchTextChange}
+          />
           <LocationList locations={this.props.locations} />
         </div>
 
