@@ -9,7 +9,8 @@ class LocationList extends Component {
             key={location.name}
             className={'location-list-item ' + (location.selected ? 'location-list-item-selected' : '')}
             onClick={() => this.props.onLocationListItemClick(location)}
-            tabIndex='1'
+            tabIndex='0'
+            role='button'
             >
             {location.name}
           </li>

@@ -93,7 +93,7 @@ class App extends Component {
     });
 
     return (
-      <div className="App">
+      <main className="App">
         <div className='left-container'>
           <div className='page-title-container'>
             <h1 className='page-title'>Catalonia Locations</h1>
@@ -127,7 +127,7 @@ class App extends Component {
             />
           </div>
         </div>
-      </div>
+      </main>
     );
   }
 }
