@@ -49,6 +49,7 @@
 
 .location-list-item {
   margin: 25px;
+  cursor: pointer;
 }
 
 /* RIGHT CONTAINER */

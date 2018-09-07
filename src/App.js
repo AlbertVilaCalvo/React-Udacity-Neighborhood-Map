@@ -18,13 +18,23 @@ class App extends Component {
     this.setState({ searchText })
   }
 
-  onMarkerClick = (location) => {
-    console.log('selected location', location);
+  onLocatioListItemClick = (location) => {
+    console.log('selected list item location', location);
     this.setState({ selectedLocationName : location.name });
+    this.getWikipediaInfoForLocation(location);
+  }
+
+  onMarkerClick = (location) => {
+    console.log('selected marker location', location);
+    this.setState({ selectedLocationName : location.name });
+    this.getWikipediaInfoForLocation(location);
+  }
+
+  getWikipediaInfoForLocation = (location) => {
     fetch(location.wikipediaUrl)
     .then(response => response.json())
     .then(info => {
-      console.log(info)
+      // console.log(info)
       this.setState(({ locationsInfo }) => {
         locationsInfo[location.name] = info.extract;
         return { locationsInfo };
@@ -62,7 +72,9 @@ class App extends Component {
     // set 'info'
     filteredLocations = filteredLocations.map(location => {
       const info = locationsInfo[location.name];
-      location.info = 'From Wikipedia.org: ' + info;
+      if (info) {
+        location.info = 'From Wikipedia.org: ' + info;
+      }
       return location;
     });
 
@@ -76,7 +88,10 @@ class App extends Component {
             searchText={searchText}
             onSearchTextChange={this.onSearchTextChange}
           />
-          <LocationList locations={filteredLocations} />
+          <LocationList
+            locations={filteredLocations}
+            onLocatioListItemClick={this.onLocatioListItemClick}
+          />
         </div>
 
         <div className='right-container'>
