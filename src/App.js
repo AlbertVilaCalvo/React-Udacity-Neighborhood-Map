@@ -50,6 +50,10 @@ class App extends Component {
     });
   }
 
+  onInfoWindowClosed = () => {
+    this.setState({ selectedLocationName: '' });
+  }
+
   render() {
     const { locations } = this.props;
     const { searchText, selectedLocationName, locationsInfo } = this.state;
@@ -119,6 +123,7 @@ class App extends Component {
               mapElement={<div style={{ height: `100%` }} />}
               locations={filteredLocations}
               onMarkerClick={this.onMarkerClick}
+              onInfoWindowClosed={this.onInfoWindowClosed}
             />
           </div>
         </div>

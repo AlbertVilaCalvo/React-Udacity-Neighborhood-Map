@@ -16,7 +16,7 @@ const MapComponent = withScriptjs(withGoogleMap((props) =>
         animation={location.selected ? 1 : 2}
       >
         {location.selected && (
-          <InfoWindow>
+          <InfoWindow onCloseClick={props.onInfoWindowClosed}>
             <div>{location.info ? location.info : 'Getting information. Please wait.'}</div>
           </InfoWindow>
         )}
