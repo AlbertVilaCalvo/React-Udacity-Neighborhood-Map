@@ -45,8 +45,12 @@
 }
 
 .location-list-item {
-  margin: 25px;
+  padding: 25px;
   cursor: pointer;
+}
+
+.location-list-item-selected {
+  background-color: #e0e0e0;
 }
 
 /* RIGHT CONTAINER */

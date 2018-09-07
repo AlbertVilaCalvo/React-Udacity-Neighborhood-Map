@@ -7,7 +7,7 @@ class LocationList extends Component {
         {this.props.locations.map(location =>
           <li
             key={location.name}
-            className='location-list-item'
+            className={'location-list-item ' + (location.selected ? 'location-list-item-selected' : '')}
             onClick={() => this.props.onLocationListItemClick(location)}
             >
             {location.name}
