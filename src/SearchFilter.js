@@ -11,7 +11,6 @@ class SearchFilter extends Component {
           onChange={event => this.props.onSearchTextChange(event.target.value)}
           className='search-input'
         />
-        <button className='search-button'>Filter</button>
       </div>
     );
   }
