@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import menu from './menu.svg';
 import './App.css';
+import LocationList from './LocationList';
 import Map from './Map';
 
 class App extends Component {
@@ -15,11 +16,7 @@ class App extends Component {
             <input className='search-input' placeholder='Station location' />
             <button className='search-button'>Filter</button>
           </div>
-          <ul>
-            {this.props.locations.map(location =>
-              <li key={location.name}>{location.name}</li>
-            )}
-          </ul>
+          <LocationList locations={this.props.locations} />
         </div>
 
         <div className='right-container'>
