@@ -9,16 +9,22 @@ import SearchFilter from './SearchFilter';
 
 class App extends Component {
   state = {
-    searchText: ''
+    searchText: '',
+    selectedLocationName: ''
   }
 
   onSearchTextChange = (searchText) => {
     this.setState({ searchText })
   }
 
+  onMarkerClick = (location) => {
+    console.log('selected location', location);
+    this.setState({ selectedLocationName : location.name });
+  }
+
   render() {
     const { locations } = this.props;
-    const { searchText } = this.state;
+    const { searchText, selectedLocationName } = this.state;
 
     let filteredLocations;
     if (searchText) {
@@ -29,6 +35,15 @@ class App extends Component {
     }
 
     filteredLocations.sort(sortBy('name'));
+
+    filteredLocations = filteredLocations.map(location => {
+      if (location.name === selectedLocationName) {
+        location.selected = true;
+      } else {
+        location.selected = false;
+      }
+      return location;
+    });
 
     return (
       <div className="App">
@@ -55,6 +70,7 @@ class App extends Component {
               containerElement={<div style={{ height: `calc(100vh - 63px)` }} />}
               mapElement={<div style={{ height: `100%` }} />}
               locations={filteredLocations}
+              onMarkerClick={this.onMarkerClick}
             />
           </div>
         </div>
