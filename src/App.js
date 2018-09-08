@@ -114,6 +114,7 @@ class App extends Component {
               alt='Menu'
               className='menu-icon'
               role="navigation"
+              aria-label='menu'
               tabIndex='0'
               onClick={() => {
                 document.getElementsByClassName('left-container')[0].classList.toggle('hidden');
