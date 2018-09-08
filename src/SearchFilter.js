@@ -10,6 +10,7 @@ class SearchFilter extends Component {
           value={this.props.searchText}
           onChange={event => this.props.onSearchTextChange(event.target.value)}
           className='search-input'
+          aria-label='Search Location'
         />
       </div>
     );
