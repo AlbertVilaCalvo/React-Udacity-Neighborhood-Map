@@ -110,9 +110,15 @@ class App extends Component {
 
         <section className='right-container'>
           <div className='right-container-top-bar'>
-            <img src={menu} alt='Menu' className='menu-icon' role="navigation" onClick={() => {
-              document.getElementsByClassName('left-container')[0].classList.toggle('hidden');
-            }}/>
+            <img src={menu}
+              alt='Menu'
+              className='menu-icon'
+              role="navigation"
+              tabIndex='0'
+              onClick={() => {
+                document.getElementsByClassName('left-container')[0].classList.toggle('hidden');
+              }}
+            />
           </div>
           <div className='map-container'>
             <Map
