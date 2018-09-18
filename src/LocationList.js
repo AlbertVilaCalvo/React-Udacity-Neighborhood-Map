@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class LocationList extends Component {
   render() {
@@ -19,5 +20,10 @@ class LocationList extends Component {
     )
   }
 }
+
+LocationList.propTypes = {
+  locations: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onLocationListItemClick: PropTypes.func.isRequired
+};
 
 export default LocationList;

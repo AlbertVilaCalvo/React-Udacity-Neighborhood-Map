@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import escapeRegExp from 'escape-string-regexp';
 import sortBy from 'sort-by';
 import menu from './menu.svg';
@@ -141,5 +142,9 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  locations: PropTypes.array.isRequired
+};
 
 export default App;
