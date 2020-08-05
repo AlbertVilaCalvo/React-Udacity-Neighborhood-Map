@@ -34,14 +34,14 @@ This app uses the Wikipedia API to retrieve information about the displayed loca
 
 *Initially all the locations are shown*
 
-<img src='screenshots/screenshot-1.png' width='640px' style="margin-right: 40px;">
+<img src='screenshots/screenshot-1.png' width='800px'>
 
 *Clicking on a location on the list focuses the map on that location's marker and displays information about it from the Wikipedia API*
 
-<img src='screenshots/screenshot-2.png' width='640px' style="margin-right: 40px;">
+<img src='screenshots/screenshot-2.png' width='800px'>
 
 *You can also filter the list of locations with the search field*
 
-<img src='screenshots/screenshot-3.png' width='640px' style="margin-right: 40px;">
+<img src='screenshots/screenshot-3.png' width='800px'>
 
 Enjoy!
