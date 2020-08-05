@@ -30,4 +30,18 @@ You can then open [http://localhost:3000](http://localhost:3000) to view it in t
 
 This app uses the Wikipedia API to retrieve information about the displayed locations.
 
+# Screenshots
+
+*Initially all the locations are shown*
+
+<img src='screenshots/screenshot-1.png' width='640px' style="margin-right: 40px;">
+
+*Clicking on a location on the list focuses the map on that location's marker and displays information about it from the Wikipedia API*
+
+<img src='screenshots/screenshot-2.png' width='640px' style="margin-right: 40px;">
+
+*You can also filter the list of locations with the search field*
+
+<img src='screenshots/screenshot-3.png' width='640px' style="margin-right: 40px;">
+
 Enjoy!
