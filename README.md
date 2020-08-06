@@ -1,5 +1,9 @@
 # Welcome to the Catalonia Locations app!
 
+## Google Maps JavaScript API Key
+
+To run the app you need to set a Google Maps JavaScript API Key on the constant `GOOGLE_MAPS_JS_API_KEY` of `src/App.js`.
+
 ## How to try the production app
 
 `npm install` or `yarn install`
@@ -30,7 +34,7 @@ You can then open [http://localhost:3000](http://localhost:3000) to view it in t
 
 This app uses the Wikipedia API to retrieve information about the displayed locations.
 
-# Screenshots
+## Screenshots
 
 *Initially all the locations are shown*
 
